@@ -10,14 +10,16 @@ from time import time
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import cm  # color map
-from mpl_toolkits.mplot3d import Axes3D
 import rastrigin
-from sklearn.model_selection import cross_val_score, train_test_split, GridSearchCV, RandomizedSearchCV, ShuffleSplit
-from sklearn.ensemble import GradientBoostingRegressor, RandomForestRegressor
+from sklearn.model_selection import cross_val_score, train_test_split, GridSearchCV, RandomizedSearchCV
+from sklearn.ensemble import GradientBoostingRegressor
 from scipy.stats import randint as sp_randint
 from scipy.stats import uniform as sp_uniform
 from skopt.plots import plot_convergence
 from skopt import gp_minimize
+
+import warnings
+warnings.filterwarnings("ignore")
 
 def plot_rastrigin(n = 100):
     x, y = np.meshgrid(np.linspace(-5.12, 5.12, n), np.linspace(-5.12, 5.12, n), indexing='ij')
