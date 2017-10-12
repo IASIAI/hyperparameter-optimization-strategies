@@ -17,7 +17,7 @@ from scipy.stats import randint as sp_randint
 from scipy.stats import uniform as sp_uniform
 from skopt.plots import plot_convergence
 from skopt import gp_minimize
-
+from mpl_toolkits.mplot3d import Axes3D
 import warnings
 warnings.filterwarnings("ignore")
 
